@@ -1,0 +1,23 @@
+.wrapper {
+    @apply bg-primary w-full h-[303px] flex flex-row justify-center absolute top-0 left-0;
+}
+
+.container {
+    @apply w-[800px] m-3;
+}
+
+.item-list {
+    @apply flex flex-col gap-2;
+}
+
+.item {
+    @apply p-2 text-center text-white hover:bg-white hover:border-white hover:text-primary;
+}
+
+.item-active {
+    @apply bg-white border-white text-primary;
+}
+
+.toggle-hidden {
+    @apply animate-slide-out h-0 hidden;
+}
