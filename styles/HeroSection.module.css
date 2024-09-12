@@ -1,0 +1,21 @@
+.wrapper {
+    @apply w-full h-screen flex flex-row justify-center items-center sticky top-0 z-50;
+
+    background-image: url('/HeroSection/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container {
+    @apply w-full flex flex-col h-screen;
+}
+
+.hero-text {
+    @apply text-6xl text-white;
+}
+
+@media screen and (max-width: 990px) {
+    .hero-text {
+        @apply text-5xl;
+    }
+}

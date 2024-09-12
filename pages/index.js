@@ -3,6 +3,7 @@ import { Playpen_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import NavBar from "@/components/NavBar";
 import ToggleBar from "@/components/ToggleBar";
+import HeroSection from "@/components/HeroSection";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,8 +30,8 @@ export default function Home() {
       <Header customFont={playwrightCuba} />
       <NavBar />
       <ToggleBar />
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <h1>hello</h1>
+      <main className="flex flex-col w-full z-20">
+        <HeroSection customFont={playwrightCuba} />
       </main>
     </div>
   );
