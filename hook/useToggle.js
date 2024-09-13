@@ -12,8 +12,12 @@ export default function useToggle() {
         if (router.asPath.includes(item.path)) {
           setPathName(item.path);
         }
+
+        if (router.asPath === '/') {
+          setPathName('top');
+        }
       })
     }, [router.asPath]);
 
-    return pathName;
+    return {pathName};
 }

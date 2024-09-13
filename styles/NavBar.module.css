@@ -1,5 +1,5 @@
 .wrapper {
-    @apply w-full bg-primary flex flex-row justify-center items-center sticky;
+    @apply w-full bg-primary flex flex-row justify-center items-center sticky top-[72px] z-50;
 }
 
 .container {

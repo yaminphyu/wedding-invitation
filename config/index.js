@@ -1,26 +1,26 @@
 export const navBars = [
     {
         name: "Home",
-        path: "/",
+        path: "top",
     },
     {
         name: "Our Day",
-        path: "#ourDay",
+        path: "our-day",
     },
     {
         name: "Our Story",
-        path: "#ourStory",
+        path: "our-story",
     },
     {
         name: "Wedding Events",
-        path: "#weddingEvents",
+        path: "wedding-events",
     },
     {
         name: "Gallery",
-        path: "#gallery",
+        path: "gallery",
     },
     {
         name: "RSVP",
-        path: "#rsvp",
+        path: "rsvp",
     },
 ]
