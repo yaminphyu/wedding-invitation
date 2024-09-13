@@ -5,6 +5,9 @@ import NavBar from "@/components/NavBar";
 import ToggleBar from "@/components/ToggleBar";
 import HeroSection from "@/components/HeroSection";
 import OurDaySection from "@/components/OurDaySection";
+import useWindowDimension from "@/hook/useWindowDimension";
+import { useContext, useEffect } from "react";
+import { MobileToggleContext } from "@/context/MobileToggleContext";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,6 +26,16 @@ const playwrightCuba = Playpen_Sans({
 });
 
 export default function Home() {
+  const { width } = useWindowDimension();
+
+  const { toggle, setToggle } = useContext(MobileToggleContext);
+
+  useEffect(() => {
+    if (width > 990 && toggle) {
+      setToggle(false);
+    }
+  }, [setToggle, toggle, width])
+  
   return (
     <div
       className={`${geistSans.variable} ${geistMono.variable} flex flex-col items-center min-h-screen font-[family-name:var(--font-geist-sans)]`}
