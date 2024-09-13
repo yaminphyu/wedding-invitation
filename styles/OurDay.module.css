@@ -1,5 +1,5 @@
 .wrapper {
-    @apply w-full flex justify-center mt-[-85px];
+    @apply w-full flex justify-center mt-[-50px];
 }
 
 .container {
@@ -63,6 +63,10 @@
 }
 
 @media screen and (max-width: 430px)  {
+    .wrapper {
+        @apply mt-[-70px];
+    }
+
     .container {
         @apply w-[350px] h-[600px];
     }

@@ -34,7 +34,7 @@ export default function Home() {
     if (width > 990 && toggle) {
       setToggle(false);
     }
-  }, [setToggle, toggle, width])
+  }, [setToggle, toggle, width]);
   
   return (
     <div
