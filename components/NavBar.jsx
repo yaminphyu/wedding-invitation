@@ -1,11 +1,24 @@
 import React from 'react';
-import Link from 'next/link';
 import styles from '@/styles/NavBar.module.css';
 import { navBars } from '@/config';
 import useToggle from '@/hook/useToggle';
+import { useRouter } from 'next/router';
 
 export default function NavBar() {
-  const pathName = useToggle();
+  const router = useRouter();
+
+  const { pathName } = useToggle();
+
+  const handleScrollTo = (path) => {
+    scroller.scrollTo(path, {
+      smooth: true,
+      duration: 500,
+      offset: -50,
+    });
+
+    path === 'top' ? router.push('/') : router.push(`/#${path}`);
+  }
+  
   
   return (
     <div className={styles.wrapper}>
@@ -13,14 +26,13 @@ export default function NavBar() {
         <ul className={styles['nav-list']}>
           {
             navBars.map((item, index) => (
-              <Link 
-                key={index} 
-                href={item.path} 
-                className={`${styles.item} 
-                ${pathName === item.path ? styles['item-active'] : ''}`}
+              <button 
+                key={index}  
+                className={`${styles.item} ${pathName === item.path ? styles['item-active'] : ''}`}
+                onClick={() => handleScrollTo(item.path)}
               >
                 <li>{item.name}</li>
-              </Link>
+              </button>
             ))
           }
         </ul>
