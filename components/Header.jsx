@@ -2,19 +2,25 @@ import React, { useContext, useEffect } from 'react';
 import { FaBars, FaXmark  } from "react-icons/fa6";
 import styles from '@/styles/Header.module.css'
 import { MobileToggleContext } from '@/context/MobileToggleContext';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
-export default function Header() {
+export default function Header({ customFont }) {
     const { toggle, setToggle } = useContext(MobileToggleContext);
 
     const handleChangeToggle = () => {
         setToggle(!toggle);
     }
 
+    useEffect(() => {
+        toggle ? disableBodyScroll(document.body) 
+        : enableBodyScroll(document.body);
+    }, [toggle])
+
     return (
         <section className={styles.wrapper}>
             <div className={styles.container}>
                 <div>
-                    <h1 className={styles['left-text']}>Kaung <span className='text-primary'>&</span> Hanny</h1>
+                    <h1 className={`${styles['left-text']} ${customFont.className}`}>Kaung <span className='text-primary'>&</span> Hanny</h1>
                 </div>
                 <div className={styles['right-div']}>
                     <h1 className={styles['right-text']}>Saturday, 2 <span className='text-primary'>December</span> 2024</h1>
