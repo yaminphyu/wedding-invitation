@@ -6,7 +6,6 @@ export default function useToggle() {
     const router = useRouter();
 
     const [ pathName, setPathName ] = useState('/');
-    const [toggleTop, setToggleTop] = useState('50px');
   
     useEffect(() => {
       navBars.map((item) => {
@@ -14,15 +13,11 @@ export default function useToggle() {
           setPathName(item.path);
         }
 
-        // if (router.asPath.includes('/')) {
-        //   setToggleTop('50px');
-        // }  
-        
-        // if (router.asPath.includes('/#our-day')) {
-        //   setToggleTop('193px');
-        // }
+        if (router.asPath === '/') {
+          setPathName('top');
+        }
       })
     }, [router.asPath]);
 
-    return {pathName, toggleTop};
+    return {pathName};
 }

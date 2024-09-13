@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 export default function ToggleBar() {
     const router = useRouter();
     
-    const { pathName, toggleTop } = useToggle();
+    const { pathName } = useToggle();
 
     const { toggle } = useContext(MobileToggleContext);
 
@@ -24,7 +24,7 @@ export default function ToggleBar() {
     }
 
     return (
-        <div className={`${styles.wrapper} ${toggle == null ? '!hidden' : (toggle ? 'animate-slide-in' : 'animate-slide-out')}`} style={{top: toggle ? toggleTop : '0px'}}>
+        <div className={`${styles.wrapper} ${toggle == null ? '!hidden' : (toggle ? 'animate-slide-in' : 'animate-slide-out')}`}>
             <div className={styles.container}>
                 <ul className={styles['item-list']}>
                     {
