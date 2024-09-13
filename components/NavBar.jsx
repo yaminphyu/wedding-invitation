@@ -3,6 +3,7 @@ import styles from '@/styles/NavBar.module.css';
 import { navBars } from '@/config';
 import useToggle from '@/hook/useToggle';
 import { useRouter } from 'next/router';
+import { scroller } from 'react-scroll';
 
 export default function NavBar() {
   const router = useRouter();
