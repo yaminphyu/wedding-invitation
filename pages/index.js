@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import NavBar from "@/components/NavBar";
 import ToggleBar from "@/components/ToggleBar";
 import HeroSection from "@/components/HeroSection";
+import OurDaySection from "@/components/OurDaySection";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,6 +32,7 @@ export default function Home() {
       <ToggleBar />
       <main className="w-full flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <HeroSection customFont={playwrightCuba} />
+        <OurDaySection customFont={playwrightCuba} />
       </main>
     </div>
   );

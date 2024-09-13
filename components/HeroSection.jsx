@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function HeroSection({ customFont }) {
   return (
-    <section className={styles.wrapper}>
+    <section className={`${styles.wrapper}`} id='top'>
         <div className={styles.container}>
           <h1 className={`${customFont.className} ${styles['hero-text']}`}>We&apos;re getting married</h1>
           <div className={styles['main-part']}>

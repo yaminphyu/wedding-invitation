@@ -1,0 +1,81 @@
+.wrapper {
+    @apply w-full flex justify-center mt-[-85px];
+}
+
+.container {
+    @apply w-[980px] flex flex-col items-center py-28;
+}
+
+.title {
+    @apply text-4xl text-gray-600 font-bold;
+}
+
+.counter {
+    @apply w-full flex flex-row justify-around items-center gap-4 my-10;
+}
+
+.item {
+    @apply w-[200px] h-[90px] flex flex-col justify-center items-center bg-primary border-2 border-primary text-white;
+}
+
+.number {
+    @apply text-3xl font-normal;
+}
+
+.string {
+    @apply text-lg uppercase font-light;
+}
+
+.main-part {
+    @apply text-center text-gray-500;
+}
+
+@media screen and (max-width: 990px) {
+    .wrapper {
+        @apply mt-0;
+    }
+
+    .container {
+        @apply w-[730px];
+    }
+}
+
+@media screen and (max-width: 735px)  {
+    .container {
+        @apply w-[350px] h-[700px];
+    }
+
+    .title {
+        @apply text-2xl;
+    }
+
+    .item {
+        @apply w-[86px] h-[90px] flex flex-col justify-center items-center bg-primary border-2 border-primary text-white;
+    }
+
+    .number {
+        @apply text-xl;
+    }
+
+    .string {
+        @apply text-sm;
+    }
+}
+
+@media screen and (max-width: 430px)  {
+    .container {
+        @apply w-[350px] h-[600px];
+    }
+
+    .title {
+        @apply text-xl;
+    }
+
+    .number {
+        @apply text-xl;
+    }
+
+    .string {
+        @apply text-sm;
+    }
+}
