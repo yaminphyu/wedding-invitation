@@ -3,7 +3,7 @@
 }
 
 .container {
-    @apply w-[980px] flex flex-row justify-between items-center px-1;
+    @apply w-[968px] flex flex-row justify-between items-center px-1;
 }
 
 .nav-list {

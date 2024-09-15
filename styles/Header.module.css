@@ -3,7 +3,7 @@
 }
 
 .container {
-    @apply w-[980px] flex flex-row justify-between items-center py-5 px-2;
+    @apply w-[968px] flex flex-row justify-between items-center py-5 px-2;
 }
 
 .right-div {
