@@ -1,21 +1,48 @@
 import React, { useEffect, useState } from 'react';
 import styles from '@/styles/OurDay.module.css';
-import { calculateTimeDifference } from '@/hook/useCustom';
 
 export default function OurDaySection({ customFont }) {
   
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const targetDate = new Date("2024-12-02T00:00:00");
+  
+  // State to keep track of time left
+  const [timeLeft, setTimeLeft] = useState({
+    days: '00',
+    hours: '00',
+    minutes: '00',
+    seconds: '00',
+  });
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeDifference(targetDate));
+  useEffect(() => {
+    // Update the countdown every second
+    const intervalId = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
 
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     setTimeLeft(calculateTimeDifference(targetDate));
-  //   }, 1000);
+      if (distance < 0) {
+        // Stop the countdown if the time is up
+        clearInterval(intervalId);
+      } else {
+        // Calculate time left
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
 
-  //   return () => clearInterval(timer); // Cleanup on component unmount
-  // }, [targetDate]);
+        // Update state with the new time left
+        setTimeLeft({
+          days,
+          hours,
+          minutes,
+          seconds,
+        });
+      }
+    }, 1000);
+
+    // Clean up the interval on component unmount
+    return () => clearInterval(intervalId);
+  }, [targetDate]);
 
   return (
     <section className={styles.wrapper} id='our-day'>
@@ -35,7 +62,7 @@ export default function OurDaySection({ customFont }) {
             <h1 className={styles.string}>Minute</h1>
           </div>
           <div className={styles.item}>
-            <p className={styles.number}>00</p>
+            <p className={styles.number}>{timeLeft.seconds}</p>
             <h1 className={styles.string}>Second</h1>
           </div>
         </div>
