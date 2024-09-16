@@ -9,6 +9,7 @@ import useWindowDimension from "@/hook/useWindowDimension";
 import { useContext, useEffect } from "react";
 import { MobileToggleContext } from "@/context/MobileToggleContext";
 import OurStorySection from "@/components/OurStorySection";
+import GallerySection from "@/components/GallerySection";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -48,6 +49,7 @@ export default function Home() {
         <HeroSection customFont={playwrightCuba} />
         <OurDaySection customFont={playwrightCuba} />
         <OurStorySection customFont={playwrightCuba} />
+        <GallerySection customFont={playwrightCuba} />
       </main>
     </div>
   );

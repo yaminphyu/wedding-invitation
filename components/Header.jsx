@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from 'react';
 import { FaBars, FaXmark  } from "react-icons/fa6";
 import styles from '@/styles/Header.module.css'
 import { MobileToggleContext } from '@/context/MobileToggleContext';
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 export default function Header({ customFont }) {
     const { toggle, setToggle } = useContext(MobileToggleContext);
@@ -10,11 +9,6 @@ export default function Header({ customFont }) {
     const handleChangeToggle = () => {
         setToggle(!toggle);
     }
-
-    useEffect(() => {
-        toggle ? disableBodyScroll(document.body) 
-        : enableBodyScroll(document.body);
-    }, [toggle])
 
     return (
         <section className={styles.wrapper}>
