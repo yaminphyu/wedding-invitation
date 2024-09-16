@@ -12,12 +12,12 @@ export const navBars = [
         path: "our-story",
     },
     {
-        name: "Wedding Events",
-        path: "wedding-events",
-    },
-    {
         name: "Gallery",
         path: "gallery",
+    },
+    {
+        name: "Wedding Events",
+        path: "wedding-events",
     },
     {
         name: "RSVP",
