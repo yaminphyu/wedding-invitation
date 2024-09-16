@@ -20,7 +20,6 @@ export default function NavBar() {
     path === 'top' ? router.push('/') : router.push(`/#${path}`);
   }
   
-  
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>

@@ -20,7 +20,7 @@ export default function ToggleBar() {
             offset: -50,
         });
   
-    //   path === 'top' ? router.push('/') : router.push(`/#${path}`);
+        path === 'top' ? router.push('/') : router.push(`/#${path}`);
     }
 
     return (

@@ -35,7 +35,7 @@
 }
 
 .main-text {
-    @apply text-2xl font-serif text-gray-400 mb-4;
+    @apply text-2xl text-gray-400 mb-4;
 }
 
 .main-date {
