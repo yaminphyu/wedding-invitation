@@ -25,7 +25,7 @@ export default function GallerySection({ customFont }) {
                                                 quality={90} 
                                                 priority 
                                                 className={styles.image} 
-                                                onMouseDown={() => handleMouseDown(image.src)}
+                                                // onMouseDown={() => handleMouseDown(image.src)}
                                             />
                                         )
                                     })

@@ -10,6 +10,7 @@ import { useContext, useEffect } from "react";
 import { MobileToggleContext } from "@/context/MobileToggleContext";
 import OurStorySection from "@/components/OurStorySection";
 import GallerySection from "@/components/GallerySection";
+import WeddingEvent from "@/components/WeddingEvent";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -50,6 +51,7 @@ export default function Home() {
         <OurDaySection customFont={playwrightCuba} />
         <OurStorySection customFont={playwrightCuba} />
         <GallerySection customFont={playwrightCuba} />
+        <WeddingEvent customFont={playwrightCuba} />
       </main>
     </div>
   );
