@@ -4,7 +4,7 @@ import styles from '@/styles/OurDay.module.css';
 export default function OurDaySection({ customFont }) {
   
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const targetDate = new Date("2024-12-02T00:00:00");
+  const targetDate = new Date("2024-12-08T00:00:00");
   
   // State to keep track of time left
   const [timeLeft, setTimeLeft] = useState({
@@ -47,7 +47,7 @@ export default function OurDaySection({ customFont }) {
   return (
     <section className={styles.wrapper} id='our-day'>
       <div className={styles.container}>
-        <h1 className={`${styles.title} ${customFont.className}`}>Saturday, 2 <span className='text-primary'>December</span> 2024</h1>
+        <h1 className={`${styles.title} ${customFont.className}`}>Sunday, 8 <span className='text-primary'>December</span> 2024</h1>
         <div className={styles.counter}>
           <div className={styles.item}>
             <p className={styles.number}>{timeLeft.days}</p>

@@ -17,7 +17,7 @@ export default function Header({ customFont }) {
                     <h1 className={`${styles['left-text']} ${customFont.className}`}>Kaung <span className='text-primary'>&</span> Hanny</h1>
                 </div>
                 <div className={styles['right-div']}>
-                    <h1 className={styles['right-text']}>Saturday, 2 <span className='text-primary'>December</span> 2024</h1>
+                    <h1 className={styles['right-text']}>Sunday, 8 <span className='text-primary'>December</span> 2024</h1>
                 </div>
                 <div className={styles['menu-icon-div']}>
                     {
