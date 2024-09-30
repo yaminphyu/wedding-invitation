@@ -11,6 +11,7 @@ import { MobileToggleContext } from "@/context/MobileToggleContext";
 import OurStorySection from "@/components/OurStorySection";
 import GallerySection from "@/components/GallerySection";
 import WeddingEvent from "@/components/WeddingEvent";
+import Head from "next/head";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -43,6 +44,10 @@ export default function Home() {
     <div
       className={`${geistSans.variable} ${geistMono.variable} flex flex-col items-center min-h-screen font-[family-name:var(--font-geist-sans)]`}
     >
+      <Head>
+        <title>{process.env.WEBSITE_NAME}</title>
+        <link rel="icon" href='favicon.jpg' />
+      </Head>
       <Header customFont={playwrightCuba} />
       <NavBar />
       <ToggleBar />
