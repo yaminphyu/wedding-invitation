@@ -7,7 +7,6 @@ import { scroller } from 'react-scroll';
 
 export default function NavBar() {
   const router = useRouter();
-
   const { pathName } = useToggle();
 
   const handleScrollTo = (path) => {
