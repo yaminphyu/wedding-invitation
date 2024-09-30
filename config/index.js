@@ -83,3 +83,12 @@ export const galleryImages = [
         },
     ],
 ];
+
+export const eventImages = [
+    {
+        name: "/event/event-room.jpeg",
+    },
+    {
+        name: "/event/map.jpeg",
+    }
+];

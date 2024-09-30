@@ -1,0 +1,11 @@
+.wrapper {
+    @apply w-full flex justify-center mt-[-50px];
+}
+
+.container {
+    @apply w-[980px] flex flex-col items-center py-28;
+}
+
+.title {
+    @apply text-4xl text-gray-600 font-bold;
+}
