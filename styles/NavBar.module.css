@@ -1,25 +1,25 @@
 .wrapper {
-    @apply w-full bg-primary flex flex-row justify-center items-center sticky top-[72px] z-50;
+	@apply w-full bg-primary flex flex-row justify-center items-center sticky top-[72px] z-50;
 }
 
 .container {
-    @apply w-[968px] flex flex-row justify-between items-center px-1;
+	@apply w-[968px] flex flex-row justify-between items-center px-1;
 }
 
 .nav-list {
-    @apply flex flex-row gap-1;
+	@apply flex flex-row gap-1;
 }
 
 .item {
-    @apply border-[1px] p-3 bg-primary border-primary hover:bg-white hover:border-white text-white text-base hover:text-primary;
+	@apply border-[1px] p-3 bg-primary border-primary hover:bg-hoverColor hover:border-white text-black text-base hover:text-primary;
 }
 
 @media screen and (max-width: 990px) {
-    .wrapper {
-        @apply hidden;
-    }
+	.wrapper {
+		@apply hidden;
+	}
 }
 
 .item-active {
-    @apply bg-white border-white text-primary;
+	@apply bg-hoverColor border-white text-primary;
 }
