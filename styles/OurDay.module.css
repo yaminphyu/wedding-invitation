@@ -1,85 +1,85 @@
 .wrapper {
-    @apply w-full flex justify-center mt-[-50px];
+	@apply w-full flex justify-center mt-[-50px];
 }
 
 .container {
-    @apply w-[980px] flex flex-col items-center py-28;
+	@apply w-[980px] flex flex-col items-center py-28;
 }
 
 .title {
-    @apply text-4xl text-gray-600 font-bold;
+	@apply text-4xl text-gray-600 font-bold;
 }
 
 .counter {
-    @apply w-full flex flex-row justify-around items-center gap-4 my-10;
+	@apply w-full flex flex-row justify-around items-center gap-4 my-10;
 }
 
 .item {
-    @apply w-[200px] h-[90px] flex flex-col justify-center items-center bg-primary border-2 border-primary text-white;
+	@apply w-[200px] h-[90px] flex flex-col justify-center items-center bg-primary border-2 border-primary text-white;
 }
 
 .number {
-    @apply text-3xl font-normal;
+	@apply text-3xl font-normal  text-hoverColor;
 }
 
 .string {
-    @apply text-lg uppercase font-light;
+	@apply text-lg uppercase font-light  text-hoverColor;
 }
 
 .main-part {
-    @apply text-center text-gray-500;
+	@apply text-center text-gray-500 font-bold text-3xl text-hoverColor;
 }
 
 @media screen and (max-width: 990px) {
-    .wrapper {
-        @apply mt-0;
-    }
+	.wrapper {
+		@apply mt-0;
+	}
 
-    .container {
-        @apply w-[730px];
-    }
+	.container {
+		@apply w-[730px];
+	}
 }
 
-@media screen and (max-width: 735px)  {
-    .container {
-        @apply w-[350px] h-[700px];
-    }
+@media screen and (max-width: 735px) {
+	.container {
+		@apply w-[350px] h-[700px];
+	}
 
-    .title {
-        @apply text-2xl;
-    }
+	.title {
+		@apply text-2xl;
+	}
 
-    .item {
-        @apply w-[86px] h-[90px] flex flex-col justify-center items-center bg-primary border-2 border-primary text-white;
-    }
+	.item {
+		@apply w-[86px] h-[90px] flex flex-col justify-center items-center bg-primary border-2 border-primary text-white;
+	}
 
-    .number {
-        @apply text-xl;
-    }
+	.number {
+		@apply text-xl;
+	}
 
-    .string {
-        @apply text-sm;
-    }
+	.string {
+		@apply text-sm;
+	}
 }
 
-@media screen and (max-width: 430px)  {
-    .wrapper {
-        @apply mt-[-70px];
-    }
+@media screen and (max-width: 430px) {
+	.wrapper {
+		@apply mt-[-70px];
+	}
 
-    .container {
-        @apply w-[350px] h-[600px];
-    }
+	.container {
+		@apply w-[350px] h-[450px];
+	}
 
-    .title {
-        @apply text-xl;
-    }
+	.title {
+		@apply text-xl;
+	}
 
-    .number {
-        @apply text-xl;
-    }
+	.number {
+		@apply text-xl;
+	}
 
-    .string {
-        @apply text-sm;
-    }
+	.string {
+		@apply text-sm;
+	}
 }

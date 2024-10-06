@@ -1,151 +1,150 @@
 .wrapper {
-    @apply w-full flex justify-center mt-[-50px];
+	@apply w-full flex justify-center mt-[-50px];
 }
 
 .container {
-    @apply w-[960px] flex flex-col items-center py-28;
+	@apply w-[960px] flex flex-col items-center py-28;
 }
 
 .title {
-    @apply text-4xl text-gray-600 font-bold mb-8;
+	@apply text-4xl text-gray-600 font-bold mb-8;
 }
 
 .main-container {
-    @apply relative w-full max-w-[960px];
+	@apply relative w-full max-w-[960px];
 }
 
 .dot-line {
-    @apply block absolute left-1/2 transform -translate-x-1/2 w-[1px] h-full bg-primary;
+	@apply block absolute left-1/2 transform -translate-x-1/2 w-[1px] h-full bg-primary;
 }
 
 .dot {
-    @apply absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-2 w-2 bg-primary rounded-full;
+	@apply absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-2 w-2 bg-primary rounded-full;
 }
 
 .item {
-    @apply flex items-center mb-8 h-[400px];
+	@apply flex items-center mb-8 h-[400px];
 }
 
 .text-right-label {
-    @apply w-1/2 text-right pr-8;
+	@apply w-1/2 text-right pr-8;
 }
 
 .text-left-label {
-    @apply w-1/2 text-left pl-8;
+	@apply w-1/2 text-left pl-8;
 }
 
 .main-text {
-    @apply text-2xl text-gray-400 mb-4;
+	@apply text-2xl text-gray-400 mb-4;
 }
 
 .main-date {
-    @apply text-gray-400 mb-2;
+	@apply text-gray-400 mb-2;
 }
 
 .main-para {
-    @apply text-gray-400;
+	@apply text-gray-400 text-hoverColor font-light;
 }
 
 .main-image-part {
-    @apply w-1/2 flex justify-center;
+	@apply w-1/2 flex justify-center;
 }
 
 .image-container {
-    @apply flex flex-row justify-center items-center border-2 border-primary rounded-full md:w-[303px] md:h-[303px];
+	@apply flex flex-row justify-center items-center border-2 border-primary rounded-full md:w-[303px] md:h-[303px];
 }
 
 .image {
-    @apply rounded-full md:!w-[280px] md:!h-[280px];
+	@apply rounded-full md:!w-[280px] md:!h-[280px] object-cover;
 }
 
-
 @media screen and (max-width: 990px) {
-    .container {
-        @apply w-[730px];
-    }
+	.container {
+		@apply w-[730px];
+	}
 }
 
 @media screen and (max-width: 810px) {
-    .image-container {
-        @apply w-[250px] h-[250px];
-    }
-    
-    .image {
-        @apply !w-[220px] !h-[220px];
-    }
+	.image-container {
+		@apply w-[250px] h-[250px];
+	}
 
-    .main-text {
-        @apply text-xl mb-2;
-    }
+	.image {
+		@apply !w-[220px] !h-[220px];
+	}
+
+	.main-text {
+		@apply text-xl mb-2;
+	}
 }
 
-@media screen and (max-width: 740px)  {
-    .main-container {
-        @apply relative w-full max-w-[760px];
-    }
+@media screen and (max-width: 740px) {
+	.main-container {
+		@apply relative w-full max-w-[760px];
+	}
 
-    .dot-line {
-        @apply hidden;
-    }
+	.dot-line {
+		@apply hidden;
+	}
 
-    .item {
-        @apply flex flex-col-reverse items-center h-[480px];
-    }
+	.item {
+		@apply flex flex-col-reverse items-center h-[480px];
+	}
 
-    .item-reverse {
-        @apply !flex-col;
-    }
-    
-    .text-right-label {
-        @apply w-[80%] text-center py-5;
-    }
-    
-    .text-left-label {
-        @apply w-[80%] text-center py-5;
-    }
+	.item-reverse {
+		@apply !flex-col;
+	}
 
-    .image-container {
-        @apply border-0;
-    }
+	.text-right-label {
+		@apply w-[80%] text-center py-5;
+	}
 
-    .main-text {
-        @apply text-xl mb-2;
-    }
+	.text-left-label {
+		@apply w-[80%] text-center py-5;
+	}
 
-    .main-date {
-        @apply mb-1;
-    }
+	.image-container {
+		@apply border-0;
+	}
+
+	.main-text {
+		@apply text-xl mb-2;
+	}
+
+	.main-date {
+		@apply mb-1;
+	}
 }
 
-@media screen and (max-width: 500px)  {
-    .container {
-        @apply py-12;
-    }
-    .item {
-        @apply flex flex-col-reverse items-center h-[410px] mb-0;
-    }
+@media screen and (max-width: 500px) {
+	.container {
+		@apply py-12;
+	}
+	.item {
+		@apply flex flex-col-reverse items-center h-[430px] mb-0;
+	}
 
-    .image-container {
-        @apply w-[150px] h-[150px];
-    }
-    
-    .image {
-        @apply !w-[120px] !h-[120px];
-    }
+	.image-container {
+		@apply w-[150px] h-[150px];
+	}
 
-    .text-right-label {
-        @apply pr-0 py-4;
-    }
+	.image {
+		@apply !w-[120px] !h-[120px];
+	}
 
-    .text-left-label {
-        @apply pl-0 py-4;
-    }
+	.text-right-label {
+		@apply pr-0 py-4;
+	}
 
-    .main-text {
-        @apply text-lg mb-1;
-    }
+	.text-left-label {
+		@apply pl-0 py-4;
+	}
 
-    .main-date {
-        @apply mb-1;
-    }
+	.main-text {
+		@apply text-lg mb-1;
+	}
+
+	.main-date {
+		@apply mb-1;
+	}
 }
