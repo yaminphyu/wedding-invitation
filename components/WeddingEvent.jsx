@@ -15,8 +15,8 @@ export default function WeddingEvent({ customFont }) {
       <div className={styles.container}>
         <h1 className={`${styles.title} ${customFont.className}`}>Time & Place</h1>
         <div className='w-full h-[60vh] py-10 box-border'>
-          <div className='w-full h-full flex justify-evenly items-start p-3 box-border'>
-            <div className='box-border'>
+          <div className='w-full h-full flex flex-col md:flex-row justify-evenly items-start p-3 mb-20 md:mb-0  box-border'>
+            <div className='box-border mb-8 md:mb-0'>
               <div className='overflow-hidden'>
                 <Image
                   src={eventImages[0].name}
@@ -58,7 +58,7 @@ export default function WeddingEvent({ customFont }) {
                 <h1 className={`text-xl text-white ${customFont.className}`}>Map</h1>
               </div>
               <div className='w-full flex flex-col justify-center items-center gap-2 mt-8 box-border'>
-                <div className='w-[8vw] my-1'>
+                <div className='w-[40vw] md:w-[8vw] my-1'>
                   <button 
                     className={`w-full h-[50px] text-gray-500 font-light bg-white border-2 border-primary hover:bg-white hover:text-primary ${customFont.className}`}
                     onClick={() => window.open(googleMapsLink, '_blank')}  
