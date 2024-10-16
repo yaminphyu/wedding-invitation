@@ -7,6 +7,7 @@ const nextConfig = {
     WEDDIND_DATE: process.env.WEDDIND_DATE,
     WEDDIND_TIME: process.env.WEDDIND_TIME,
     WEDDING_ADDRESS: process.env.WEDDING_ADDRESS,
+    WEDDING_URL: process.env.WEDDING_URL,
   }
 };
 

@@ -1,5 +1,6 @@
 .wrapper {
-    @apply w-full h-[135vh] flex justify-center mt-[-50px];
+    @apply w-full h-[95vh] flex justify-center mt-[-50px];
+    /* @apply w-full h-[135vh] flex justify-center mt-[-50px]; */
 }
 
 .container {

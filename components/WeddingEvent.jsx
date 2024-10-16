@@ -27,20 +27,20 @@ export default function WeddingEvent({ customFont }) {
                 />
               </div>
               <div className='w-full h-[70px] bg-primary flex justify-center items-center'>
-                <h1 className={`text-xl text-white ${customFont.className}`}>Wedding Ceremony</h1>
+                <h1 className={`text-xl text-hoverColor font-semibold ${customFont.className}`}>Wedding Ceremony</h1>
               </div>
               <div className='w-full flex flex-col justify-center items-center gap-2 mt-8 box-border'>
                 <div className='flex justify-center items-center gap-3'>
-                  <FaRegCalendarAlt className='text-primary' />
-                  <p className={`font-light text-gray-500 ${customFont.className}`}>{process.env.WEDDIND_DATE}</p>
+                  <FaRegCalendarAlt className='text-hoverColor text-lg' />
+                  <p className={`font-semibold text-gray-700 ${customFont.className}`}>{process.env.WEDDIND_DATE}</p>
                 </div>
                 <div className='flex justify-center items-center gap-3'>
-                  <WiTime8 className='text-primary' />
-                  <p className={`font-light text-gray-500 ${customFont.className}`}>{process.env.WEDDIND_TIME}</p>
+                  <WiTime8 className='text-hoverColor text-lg' />
+                  <p className={`font-semibold text-gray-700 ${customFont.className}`}>{process.env.WEDDIND_TIME}</p>
                 </div>
                 <div className='flex justify-center items-center gap-3'>
-                  <RiMapPinLine className='text-primary' />
-                  <p className={`font-light text-gray-500 ${customFont.className}`}>{process.env.WEDDING_ADDRESS}</p>
+                  <RiMapPinLine className='text-hoverColor text-lg' />
+                  <p className={`font-semibold text-gray-700 ${customFont.className}`}>{process.env.WEDDING_ADDRESS}</p>
                 </div>
               </div>
             </div>
@@ -55,15 +55,44 @@ export default function WeddingEvent({ customFont }) {
                 />
               </div>
               <div className='w-full h-[70px] bg-primary flex justify-center items-center'>
-                <h1 className={`text-xl text-white ${customFont.className}`}>Map</h1>
+                <h1 className={`text-xl text-hoverColor font-semibold ${customFont.className}`}>Map</h1>
               </div>
               <div className='w-full flex flex-col justify-center items-center gap-2 mt-8 box-border'>
-                <div className='w-[40vw] md:w-[8vw] my-1'>
+                <div className='w-[40vw] md:w-[15vw] xl:w-[8vw] my-1'>
                   <button 
-                    className={`w-full h-[50px] text-gray-500 font-light bg-white border-2 border-primary hover:bg-white hover:text-primary ${customFont.className}`}
+                    className={`w-full h-[50px] font-semibold border-2 border-primary hover:border-hoverColor text-hoverColor bg-primary hover:text-white hover:bg-hoverColor ${customFont.className}`}
                     onClick={() => window.open(googleMapsLink, '_blank')}  
                   >Get Direction</button>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>      
+        <div className='w-full h-[60vh] py-10 box-border'>
+          <div className='w-full h-full flex flex-col md:flex-row justify-evenly items-start p-3 mb-20 md:mb-0  box-border'>
+            <div className='box-border mb-8 md:mb-0 w-[400px] h-[400px] flex flex-col justify-center items-center'>
+              <h1 className={`text-xl text-gray-700 font-semibold my-5 ${customFont.className}`}>&#34;&nbsp;Will you attend our wedding?&nbsp;&#34;</h1>
+              <button 
+                className='text-hoverColor bg-primary hover:text-white hover:bg-hoverColor text-lg font-bold rounded-md w-[210px] text-center my-5 py-3 px-5'
+                onClick={() => window.open(process.env.WEDDING_URL, '_blank')}
+              >WILL ATTEND</button>
+              <button className='text-hoverColor bg-primary hover:text-white hover:bg-hoverColor text-lg font-bold rounded-md w-[210px] text-center my-5 py-3 px-5'>WILL NOT ATTEND</button>
+            </div>
+            <div className='box-border'>
+              <div className='overflow-hidden'>
+                <Image
+                    src={`${eventImages[2].name}`}
+                    alt='event image'
+                    width={400}
+                    height={400}
+                    className='w-[450px] hover:animate-pulse-once max-w-full max-h-full h-[290px]'
+                />
+              </div>
+              <div className='w-full flex flex-col justify-center items-center mt-5 box-border'>
+                <p className={`font-semibold text-sm text-gray-700 ${customFont.className}`}>You can take free Bus JR Takadanobaba Station to hotel.</p>
+                <p className={`font-semibold text-sm text-gray-700 ${customFont.className}`}>8:00~21:00 (At 10 and 40 minutes past each hour.)</p>
+                <p className={`font-semibold text-sm text-gray-700 ${customFont.className}`}>Notes : About 10 minutes travel time.</p>
+                <p className={`font-semibold text-sm text-gray-700 ${customFont.className}`}>Capacity is 22 passengers.</p>
               </div>
             </div>
           </div>

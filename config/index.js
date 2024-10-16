@@ -19,10 +19,6 @@ export const navBars = [
         name: "Wedding Events",
         path: "wedding-events",
     },
-    {
-        name: "RSVP",
-        path: "rsvp",
-    },
 ];
 
 export const galleryImages = [
@@ -90,5 +86,8 @@ export const eventImages = [
     },
     {
         name: "/event/map.jpeg",
+    },
+    {
+        name: "/event/bus.jpeg",
     }
 ];
