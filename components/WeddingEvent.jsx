@@ -66,9 +66,34 @@ export default function WeddingEvent({ customFont }) {
                 </div>
               </div>
             </div>
+            <div className='box-border my-8 md:hidden block'>
+              <div className='overflow-hidden'>
+                <Image
+                    src={`${eventImages[2].name}`}
+                    alt='event image'
+                    width={400}
+                    height={400}
+                    className='w-[450px] hover:animate-pulse-once max-w-full max-h-full h-[290px]'
+                />
+              </div>
+              <div className='w-full flex flex-col justify-center items-center mt-5 box-border'>
+                <p className={`font-semibold text-[12px] text-gray-700 ${customFont.className}`}>You can take free bus JR Takadanobaba Station to hotel.</p>
+                <p className={`font-semibold text-[13px] text-gray-700 ${customFont.className}`}>8:00~21:00 (At 10 and 40 minutes past each hour.)</p>
+                <p className={`font-semibold text-[13px] text-gray-700 ${customFont.className}`}>Notes : About 10 minutes travel time.</p>
+                <p className={`font-semibold text-[13px] text-gray-700 ${customFont.className}`}>Capacity is 22 passengers.</p>
+              </div>
+            </div>
+            <div className='box-border mb-8 md:hidden block flex flex-col justify-center items-center w-full'>
+              <h1 className={`text-xl text-gray-700 font-semibold my-5 ${customFont.className}`}>&#34;&nbsp;Will you attend our wedding?&nbsp;&#34;</h1>
+              <button 
+                className='text-hoverColor bg-primary hover:text-white hover:bg-hoverColor text-lg font-bold rounded-md w-[210px] text-center my-3 py-3 px-5'
+                onClick={() => window.open(process.env.WEDDING_URL, '_blank')}
+              >WILL ATTEND</button>
+              <button className='text-hoverColor bg-primary hover:text-white hover:bg-hoverColor text-lg font-bold rounded-md w-[210px] text-center my-3 py-3 px-5'>WILL NOT ATTEND</button>
+            </div>
           </div>
-        </div>      
-        <div className='w-full h-[60vh] py-10 box-border'>
+        </div>
+        <div className='w-full h-[60vh] py-10 box-border md:block hidden'>
           <div className='w-full h-full flex flex-col md:flex-row justify-evenly items-start p-3 mb-20 md:mb-0  box-border'>
             <div className='box-border mb-8 md:mb-0 w-[400px] h-[400px] flex flex-col justify-center items-center'>
               <h1 className={`text-xl text-gray-700 font-semibold my-5 ${customFont.className}`}>&#34;&nbsp;Will you attend our wedding?&nbsp;&#34;</h1>
