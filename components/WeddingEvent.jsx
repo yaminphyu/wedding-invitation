@@ -66,7 +66,7 @@ export default function WeddingEvent({ customFont }) {
                 </div>
               </div>
             </div>
-            <div className='box-border my-8 md:hidden block'>
+            {/* <div className='box-border my-8 md:hidden block'>
               <div className='overflow-hidden'>
                 <Image
                     src={`${eventImages[2].name}`}
@@ -90,7 +90,7 @@ export default function WeddingEvent({ customFont }) {
                 onClick={() => window.open(process.env.WEDDING_URL, '_blank')}
               >WILL ATTEND</button>
               <button className='text-hoverColor bg-primary hover:text-white hover:bg-hoverColor text-lg font-bold rounded-md w-[210px] text-center my-3 py-3 px-5'>WILL NOT ATTEND</button>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className='w-full h-[60vh] py-10 box-border md:block hidden'>
