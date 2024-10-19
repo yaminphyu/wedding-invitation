@@ -1,5 +1,5 @@
 .wrapper {
-    @apply bg-primary w-full h-[303px] flex flex-row justify-center fixed left-0 z-20 top-[50px];
+    @apply bg-primary w-full h-[280px] flex flex-row justify-center fixed left-0 z-20 top-[50px];
 }
 
 .container {

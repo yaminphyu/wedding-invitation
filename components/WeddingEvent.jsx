@@ -4,7 +4,32 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 import { WiTime8 } from "react-icons/wi";
 import { RiMapPinLine } from "react-icons/ri";
 import styles from '@/styles/WeddingEvent.module.css';
-import { eventImages } from '@/config'
+import { eventImages } from '@/config';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const CustomToast = () => {
+  return (
+    <ToastContainer
+      position="bottom-center"
+      autoClose={4000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="light"
+      toastStyle={{
+        backgroundColor: '#FDD7E4', 
+        color: '#CC7A8B',
+        fontWeight: 'bold',
+        fontSize: '18px',
+      }}
+    />
+  );
+}
 
 export default function WeddingEvent({ customFont }) {
   const destination = "RHIGA Royal Hotel, Tokyo";
@@ -26,6 +51,8 @@ export default function WeddingEvent({ customFont }) {
       setIsIos(true);
     }
   }, []);
+
+  const notify = () => toast("Thanks for your time!");
   
   return (
     <section className={styles.wrapper} id='wedding-events'>
@@ -106,8 +133,12 @@ export default function WeddingEvent({ customFont }) {
                 className='text-hoverColor bg-primary hover:text-white hover:bg-hoverColor text-normal font-bold rounded-md w-[260px] text-center my-3 py-3 px-5'
                 onClick={() => window.open(process.env.WEDDING_URL, '_blank')}
               >WILL ATTEND (出席)</button>
-              <button className='text-hoverColor bg-primary hover:text-white hover:bg-hoverColor text-normal font-bold rounded-md w-[260px] text-center my-3 py-3 px-5'>WILL NOT ATTEND (欠席)</button>
+              <button 
+                className='text-hoverColor bg-primary hover:text-white hover:bg-hoverColor text-normal font-bold rounded-md w-[260px] text-center my-3 py-3 px-5'
+                onClick={notify}
+              >WILL NOT ATTEND (欠席)</button>
             </div>
+            <CustomToast />
           </div>
         </div>
         <div className='w-full h-[60vh] py-10 box-border md:block hidden'>
@@ -118,7 +149,10 @@ export default function WeddingEvent({ customFont }) {
                 className='text-hoverColor bg-primary hover:text-white hover:bg-hoverColor text-lg font-bold rounded-md w-[270px] text-center my-5 py-3 px-5'
                 onClick={() => window.open(process.env.WEDDING_URL, '_blank')}
               >WILL ATTEND (出席)</button>
-              <button className='text-hoverColor bg-primary hover:text-white hover:bg-hoverColor text-lg font-bold rounded-md w-[270px] text-center my-5 py-3 px-5'>WILL NOT ATTEND (欠席)</button>
+              <button 
+                className='text-hoverColor bg-primary hover:text-white hover:bg-hoverColor text-lg font-bold rounded-md w-[270px] text-center my-5 py-3 px-5'
+                onClick={notify}
+              >WILL NOT ATTEND (欠席)</button>
             </div>
             <div className='box-border'>
               <div className='overflow-hidden'>
@@ -139,6 +173,7 @@ export default function WeddingEvent({ customFont }) {
             </div>
           </div>
         </div>
+        <CustomToast />
       </div>
     </section>
   )

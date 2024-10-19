@@ -11,7 +11,7 @@ export default function ToggleBar() {
     
     const { pathName } = useToggle();
 
-    const { toggle } = useContext(MobileToggleContext);
+    const { toggle, setToggle } = useContext(MobileToggleContext);
 
     const handleScrollTo = (path) => {
         scroller.scrollTo(path, {
@@ -19,7 +19,8 @@ export default function ToggleBar() {
             duration: 500,
             offset: -50,
         });
-  
+
+        setToggle(!toggle);
         path === 'top' ? router.push('/') : router.push(`/#${path}`);
     }
 
