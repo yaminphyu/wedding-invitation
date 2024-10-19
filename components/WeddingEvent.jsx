@@ -58,7 +58,7 @@ export default function WeddingEvent({ customFont }) {
     <section className={styles.wrapper} id='wedding-events'>
       <div className={styles.container}>
         <h1 className={`${styles.title} ${customFont.className}`}>Time & Place</h1>
-        <div className={`w-full h-[60vh] py-10 box-border ${isIos ? 'mt-[95vh]' : ""}`}>
+        <div className={`w-full h-[60vh] py-10 box-border ${isIos ? styles['ios-wrapper'] : ""}`}>
           <div className='w-full h-full flex flex-col md:flex-row justify-evenly items-start p-3 mb-20 md:mb-0  box-border'>
             <div className='box-border mb-8 md:mb-0'>
               <div className='overflow-hidden'>

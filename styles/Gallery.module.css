@@ -3,7 +3,7 @@
 }
 
 .container {
-    @apply w-[980px] flex flex-col items-center py-28;
+    @apply w-[980px] flex flex-col items-center pt-16 pb-28;
 }
 
 .title {
