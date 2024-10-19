@@ -11,17 +11,5 @@
 }
 
 .ios-wrapper {
-    @apply mt-[80vh];
-}
-
-@media screen and (min-height: 700px) and (max-height: 844px) {
-    .ios-wrapper {
-        @apply mt-[90vh];
-    }
-}
-
-@media screen and (max-width: 390px) and (min-width: 844px) {
-    .ios-wrapper {
-        @apply mt-[95vh];
-    }
+    @apply mt-[95vh];
 }

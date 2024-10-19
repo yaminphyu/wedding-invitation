@@ -47,6 +47,11 @@ export default function Home() {
 			<Head>
 				<title>{process.env.WEBSITE_NAME}</title>
 				<link rel="icon" href="favicon.jpg" />
+				<meta property="og:title" content="Kaung&Hanny" />
+				<meta property="og:type" content="website" />
+				<meta property="og:url" content="https://wedding-invitation-vert-theta.vercel.app" />
+				<meta property="og:image:url" content="https://wedding-invitation-vert-theta.vercel.app/thumb.jpg" />
+				<meta property="og:description" content="Wedding Invitation" />
 			</Head>
 			<Header customFont={playwrightCuba} />
 			<NavBar />
